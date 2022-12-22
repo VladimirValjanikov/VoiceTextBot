@@ -27,7 +27,7 @@ namespace VoiceTextBot.Controllers
                         InlineKeyboardButton.WithCallbackData($" Русский" , $"ru"),
                         InlineKeyboardButton.WithCallbackData($" English" , $"en")
                     });
-
+                    
                     // передаем кнопки вместе с сообщением (параметр ReplyMarkup)
                     await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"<b>  Наш бот превращает аудио в текст.</b> {Environment.NewLine}" +
                         $"{Environment.NewLine}Можно записать сообщение и переслать другу, если лень печатать.{Environment.NewLine}", cancellationToken: ct, parseMode: ParseMode.Html, replyMarkup: new InlineKeyboardMarkup(buttons));

@@ -35,6 +35,8 @@ namespace VoiceTextBot
 
             services.AddSingleton<IStorage, MemoryStorage>();
 
+            services.AddSingleton<IFileHandler, AudioFileHandler>();
+           
             services.AddTransient<DefaultMessageController>();
             services.AddTransient<VoiceMessageController>();
             services.AddTransient<TextMessageController>();
@@ -49,7 +51,11 @@ namespace VoiceTextBot
         {
             return new AppSettings()
             {
-                BotToken = "5959821127:AAH-1hsRPpycVat3XeOQIDG9PFYP-Q7cUAY"
+                BotToken = "5959821127:AAH-1hsRPpycVat3XeOQIDG9PFYP-Q7cUAY",
+                DownloadsFolder = "C:\\Users\\Варнавский\\DownloadsAudio",
+                AudioFileName = "audio",
+                InputAudioFormat = "ogg",
+                OutputAudioFormat = "wav",
             };
         }
     }
