@@ -78,8 +78,8 @@ namespace VoiceTextBot
             Console.WriteLine(errorMessage);
 
             // Задержка перед повторным подключением
-            Console.WriteLine("Ожидаем 10 секунд перед повторным подключением.");
-            Thread.Sleep(10000);
+            Console.WriteLine("Ожидаем 1 секунду перед повторным подключением.");
+            Thread.Sleep(1000);
 
             return Task.CompletedTask;
         }		
